@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class FastDDSConan(ConanFile):
     name = "Fast-DDS-GEN"
-    version = "1.0.4"
+    version = "2.2.0"
     license = "Apache License 2.0"
     author = "Frieder Pankratz"
     url = "https://github.com/TUM-CONAN/conan-fast-dds-gen.git"
