@@ -1,5 +1,5 @@
 macro(gradle_build directory jar)
-    find_package(Java 1.6 COMPONENTS Runtime REQUIRED)
+    find_package(Java COMPONENTS Runtime REQUIRED)
     if(WIN32)
         find_program(GRADLE_EXE gradle.bat)
     else()

@@ -15,6 +15,10 @@ class FastDDSConan(ConanFile):
 
     exports_sources = "CMakeLists.txt", "cmake/*"
 
+    build_requires = (
+        "zulu-openjdk/11.0.15",
+        )
+
     def source(self):
         git = tools.Git()        
         git.clone("https://github.com/eProsima/Fast-DDS-Gen.git", "master")#%self.version)
@@ -40,7 +44,10 @@ class FastDDSConan(ConanFile):
     def build(self):
         #cmake = self._configure_cmake()
         #cmake.build()
-        self.run("./gradlew assemble")
+        if tools.os_info.is_windows:
+            self.run("gradlew.bat assemble")
+        else:
+            self.run("./gradlew assemble")
 
     def package(self):
         #cmake = self._configure_cmake()
