@@ -9,6 +9,7 @@ class FastDDSConan(ConanFile):
     name = "fast-dds-gen"
     version = "2.4.0"
     package_type = "application"
+    
     license = "Apache License 2.0"
     author = "Frieder Pankratz"
     url = "https://github.com/TUM-CONAN/conan-fast-dds-gen.git"
