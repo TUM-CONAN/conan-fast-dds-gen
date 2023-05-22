@@ -67,5 +67,5 @@ class FastDDSConan(ConanFile):
     def package_info(self):
         self.cpp_info.includedirs = []
         self.cpp_info.libdirs = []
-        self.buildenv_info.append_path("PATH", os.path.join(self.package_folder, "bin"))
-        self.runenv_info.append_path("PATH", os.path.join(self.package_folder, "bin"))
+        self.conf_info.define_path("tools.fastdds-gen.jar_path", os.path.join(self.package_folder, "bin"))
+        
