@@ -7,7 +7,7 @@ from conan.tools.env import Environment
 
 class FastDDSConan(ConanFile):
     name = "fast-dds-gen"
-    version = "2.4.0"
+    version = "3.0.0"
     package_type = "application"
     
     license = "Apache License 2.0"
